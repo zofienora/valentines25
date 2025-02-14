@@ -1,0 +1,21 @@
+body {
+    min-height: 100vh;
+    margin: 0;
+    display: grid;
+    place-content: center;
+    place-items: center;
+  }
+  
+  .heart {
+    --c: red; /* Heart color */
+    width: 200px;
+    aspect-ratio: 1;
+    background:
+      /* Left circular lobe */
+      radial-gradient(circle at 60% 65%, var(--c) 64%, transparent 65%) top left/50% 50%,
+      /* Right circular lobe */
+      radial-gradient(circle at 40% 65%, var(--c) 64%, transparent 65%) top right/50% 50%,
+      /* Bottom conic portion */
+      conic-gradient(from -45deg at 50% 85.5%, var(--c) 90deg, transparent 0) bottom/100% 50%;
+    background-repeat: no-repeat;
+  }
